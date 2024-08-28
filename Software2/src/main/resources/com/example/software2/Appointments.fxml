@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.software2.Controllers.CustomerandAppointmentController">
+   <children>
+      <TableView fx:id="customersTable" layoutX="27.0" layoutY="46.0" prefHeight="123.0" prefWidth="704.0">
+        <columns>
+          <TableColumn fx:id="customersID" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="customersName" prefWidth="105.0" text="Name" />
+            <TableColumn fx:id="customersAddress" prefWidth="99.0" text="Address" />
+            <TableColumn fx:id="customersPhone" prefWidth="158.0" text="Phone Number" />
+            <TableColumn fx:id="customersPostal" prefWidth="91.0" text="ZipCode" />
+            <TableColumn fx:id="customersDivision" prefWidth="131.0" text="Division" />
+            <TableColumn fx:id="customersDivisionID" prefWidth="70.0" text="DivisionID" />
+        </columns>
+      </TableView>
+      <Button layoutX="27.0" layoutY="188.0" mnemonicParsing="false" onAction="#addCustomerHandler" text="Add" />
+      <Button layoutX="118.0" layoutY="188.0" mnemonicParsing="false" onAction="#modifyCustomerHandler" text="Modify" />
+      <Button layoutX="215.0" layoutY="188.0" mnemonicParsing="false" onAction="#deleteCustomerHandler" text="Delete" />
+      <Button layoutX="470.0" layoutY="188.0" mnemonicParsing="false" onAction="#viewReports" text="Reports" />
+      <TableView fx:id="appointmentsTable" layoutX="7.0" layoutY="248.0" prefHeight="167.0" prefWidth="922.0">
+        <columns>
+          <TableColumn fx:id="appointmentsID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="appointmentsTitle" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="appointmentsType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="appointmentsDesc" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="appointmentsStartTime" prefWidth="185.0" text="Start Time" />
+            <TableColumn fx:id="appointmentsEndTime" prefWidth="167.0" text="End Time" />
+            <TableColumn fx:id="appointmentsContact" prefWidth="110.0" text="Contact" />
+            <TableColumn fx:id="appointmentsUserID" prefWidth="65.0" text="User ID" />
+            <TableColumn fx:id="appointmentsCustomerID" prefWidth="94.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="53.0" layoutY="14.0" prefHeight="17.0" prefWidth="147.0" text="Customers" />
+      <Label layoutX="53.0" layoutY="225.0" prefHeight="17.0" prefWidth="168.0" text="Appointments" />
+      <Button layoutX="26.0" layoutY="415.0" mnemonicParsing="false" onAction="#addAppointmentHandler" text="Add" />
+      <Button layoutX="120.0" layoutY="415.0" mnemonicParsing="false" onAction="#modifyAppointmentHandler" text="Modify" />
+      <Button layoutX="242.0" layoutY="415.0" mnemonicParsing="false" onAction="#deleteAppointmentHandler" text="Delete" />
+      <Button layoutX="571.0" layoutY="415.0" mnemonicParsing="false" onAction="#logoutHandler" text="Logout" />
+      <RadioButton fx:id="weekButton" layoutX="317.0" layoutY="225.0" mnemonicParsing="false" onAction="#filterAppointmentsByWeek">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleApp" />
+         </toggleGroup></RadioButton>
+      <Label layoutX="179.0" layoutY="225.0" text="Organize By: " />
+      <Label layoutX="269.0" layoutY="225.0" text="Week:" />
+      <Label layoutX="461.0" layoutY="225.0" text="Month:" />
+      <RadioButton fx:id="monthButton" layoutX="516.0" layoutY="225.0" mnemonicParsing="false" onAction="#filterAppointmentsByMonth" toggleGroup="$toggleApp" />
+      <RadioButton fx:id="allButton" layoutX="702.0" layoutY="225.0" mnemonicParsing="false" onAction="#viewAllAppointments" toggleGroup="$toggleApp" />
+      <Label layoutX="581.0" layoutY="225.0" text="All Appointments" />
+   </children>
+</AnchorPane>

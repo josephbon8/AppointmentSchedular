@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.software2.Controllers.ReportsController">
+   <children>
+      <TableView fx:id="appointmentTable" layoutX="39.0" layoutY="27.0" prefHeight="200.0" prefWidth="361.0">
+        <columns>
+          <TableColumn fx:id="appMonth" prefWidth="116.0" text="Appointment Month" />
+          <TableColumn fx:id="appType" prefWidth="115.0" text="Appointment Type" />
+            <TableColumn fx:id="appTotal" prefWidth="122.0" text="Total Appointments" />
+        </columns>
+      </TableView>
+      <TableView fx:id="contactTable" layoutX="441.0" layoutY="27.0" prefHeight="200.0" prefWidth="248.0">
+        <columns>
+          <TableColumn fx:id="contactName" prefWidth="111.0" text="Contact Name" />
+          <TableColumn fx:id="contactEmail" prefWidth="110.0" text="Contact Email" />
+        </columns>
+      </TableView>
+       <Label layoutX="27.0" layoutY="253.0" prefHeight="17.0" prefWidth="115.0">Contact Schedule:</Label>
+      <TableView fx:id="customerTable" layoutX="27.0" layoutY="287.0" prefHeight="200.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="contactID" prefWidth="75.0" text="Contact ID" />
+          <TableColumn fx:id="customerTitle" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="customerType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="customerDesc" prefWidth="101.0" text="Description" />
+            <TableColumn fx:id="customerStartDate" prefWidth="107.0" text="Start Date" />
+            <TableColumn fx:id="customerEndDate" prefWidth="162.0" text="End Date" />
+            <TableColumn fx:id="customerID" prefWidth="92.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="522.0" layoutY="497.0" mnemonicParsing="false" onAction="#exitHandler" text="Exit" />
+      <ComboBox fx:id="contactCombo" layoutX="179.0" layoutY="249.0" onAction="#getContact" prefWidth="150.0" />
+   </children>
+</AnchorPane>

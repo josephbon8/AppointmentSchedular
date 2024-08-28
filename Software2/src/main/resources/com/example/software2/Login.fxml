@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.software2.Controllers.LoginController">
+   <children>
+      <Button fx:id="loginButton" layoutX="255.0" layoutY="232.0" mnemonicParsing="false" onAction="#checkUserNameandPasswordHandler" text="Login" />
+      <TextField fx:id="passwordField" layoutX="199.0" layoutY="175.0" />
+      <TextField fx:id="usernameField" layoutX="199.0" layoutY="114.0" />
+      <Label fx:id="userNameLabel" layoutX="84.0" layoutY="118.0" prefHeight="17.0" prefWidth="89.0" text="UserName" />
+      <Label fx:id="passwordLabel" layoutX="87.0" layoutY="179.0" prefHeight="17.0" prefWidth="89.0" text="Password" />
+      <Label fx:id="headerLabel" layoutX="195.0" layoutY="49.0" prefHeight="17.0" prefWidth="186.0" text="Appointment Scheduler Sign-In" />
+      <Label fx:id="timezoneLabel" layoutX="86.0" layoutY="236.0" prefHeight="17.0" prefWidth="123.0" text="Location" />
+      <Label fx:id="zoneIDLabel" layoutX="22.0" layoutY="236.0" text="ZoneID:" />
+   </children>
+</AnchorPane>

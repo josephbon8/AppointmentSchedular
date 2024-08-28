@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.software2.Controllers.ModifyCustomerController">
+   <children>
+      <Label layoutX="57.0" layoutY="60.0" prefHeight="17.0" prefWidth="140.0" text="Modify Customer" />
+      <Label layoutX="139.0" layoutY="103.0" text="ID" />
+      <Label layoutX="139.0" layoutY="142.0" text="Name" />
+      <Label layoutX="139.0" layoutY="177.0" text="Address" />
+      <Label layoutX="139.0" layoutY="210.0" text="Phone Number" />
+      <Label layoutX="139.0" layoutY="248.0" text="Country" />
+      <Label layoutX="139.0" layoutY="293.0" />
+      <Label layoutX="145.0" layoutY="285.0" text="State" />
+      <Label layoutX="139.0" layoutY="370.0" />
+      <Label layoutX="140.0" layoutY="325.0" text="ZipCode" />
+      <TextField fx:id="modifyID" disable="true" editable="false" layoutX="261.0" layoutY="99.0" />
+      <TextField fx:id="modifyName" layoutX="261.0" layoutY="138.0" />
+      <TextField fx:id="modifyAddress" layoutX="261.0" layoutY="173.0" />
+      <TextField fx:id="modifyPhone" layoutX="261.0" layoutY="206.0" />
+      <ComboBox fx:id="modifyState" layoutX="261.0" layoutY="281.0" prefWidth="150.0" />
+      <Button layoutX="254.0" layoutY="387.0" mnemonicParsing="false" onAction="#saveCustomer" text="Save" />
+      <Button layoutX="365.0" layoutY="387.0" mnemonicParsing="false" onAction="#cancelCustomer" text="Cancel" />
+      <ComboBox fx:id="modifyCountry" layoutX="261.0" layoutY="244.0" onAction="#selectCountry" prefWidth="150.0" />
+      <TextField fx:id="modifyPostal" layoutX="261.0" layoutY="321.0" />
+   </children>
+</AnchorPane>
