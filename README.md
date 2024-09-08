@@ -1,0 +1,1 @@
+This application allows you to schedule appointments by logging in as an admin and schedule appointments for a customer. All appointments are viewable in a table and you're able to modify them. Use's MySQL to store appointment data.
